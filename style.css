@@ -1,0 +1,86 @@
+.red {
+    background-color: #FF0000;
+}
+
+.orange {
+    background-color: #FFA500;
+}
+
+.yellow {
+    background-color: #FFFF00;
+    color: #000;
+}
+
+.green {
+    background-color: #008000;
+}
+
+.blue {
+    background-color: #0000FF;
+}
+
+.indigo {
+    background-color: #4B0082;
+}
+
+.violet {
+    background-color: #EE82EE;
+    color: #000;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px dashed red; */
+}
+h1, p{
+    margin: 0;
+    margin-top: 5px;
+}
+.main-container{
+    margin-top: 20px;
+    display: flex;
+    /* border: 2px solid green; */
+}
+
+h6{
+    font-size: 1.2rem;
+    margin: 10px 0px;
+}
+
+.container{
+    flex: 1 1 60%;
+    background-color: rgb(228, 228, 226);
+    /* border: 2px dashed blue; */
+}
+.playground{
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: rgb(208, 209, 190);
+    /* justify-content: space-between; */
+}
+
+.flex-box-playground, .flex-item-playground, .item-properties-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+     gap: 20px;
+} 
+
+
+
+
+.flex-box-playground > * , 
+.item-properties-container > *{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+select{
+    text-align: center;
+}

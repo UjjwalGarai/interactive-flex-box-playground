@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Flexbox Toolkit: Visualize and Play with Flex Properties</h1>
+        <p>A practical flexbox toolkit for anyone learning CSS. This playground lets you tweak flex properties on colorful items,
+             helping you learn by doing. Experiment with alignment, gap spacing, wrapping, and more with instant feedback!</p>
+    </div>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="color-item red">Red</div>
+            <div class="color-item orange">Orange</div>
+            <div class="color-item yellow">Yellow</div>
+            <div class="color-item green">Green</div>
+            <div class="color-item blue">Blue</div>
+            <div class="color-item indigo">Indigo</div>
+            <div class="color-item violet">Violet</div>
+        </div>
+        <div class="playground">
+            <div class="flex-box-playground">
+                <h6>Flex Box Playground</h6>
+                <div class="flex-direction-container">
+                    <label for="flex-direction">Flex Direction</label>
+                    <select name="flex-direction" id="flex-direction">
+                        <option value="column">Column</option>
+                        <option value="row">Row</option>
+                        <option value="column-reverse">Column Reverse</option>
+                        <option value="row-reverse">Row Reverse</option>
+                    </select>
+                </div>
+                <div class="justify-content-container">
+                    <label for="justify-content">Justify Content</label>
+                    <select name="justify-content" id="justify-content">
+                        <option value="">None</option>
+                        <option value="flex-start">Flex Start</option>
+                        <option value="flex-end">Flex End</option>
+                        <option value="center">Center</option>
+                        <option value="space-between">Space Between</option>
+                        <option value="space-around">Space Around</option>
+                        <option value="space-evenly">Space Evenly</option>
+                    </select>
+                </div>
+                <div class="align-item-conatiner">
+                    <label for="align-items">Align Items</label>
+                    <select name="align-items" id="align-items">
+                        <option value="">None</option>
+                        <option value="stretch">Stretch</option>
+                        <option value="flex-start">Flex Start</option>
+                        <option value="flex-end">Flex End</option>
+                        <option value="center">Center</option>
+                        <option value="baseline">Baseline</option>
+                    </select>
+                </div>
+                <div class="flex-wrap-container">
+                    <label for="flex-wrap">Flex Wrap</label>
+                    <select name="flex-wrap" id="flex-wrap">
+                        <option value="">None</option>
+                        <option value="nowrap">No Wrap</option>
+                        <option value="wrap">Wrap</option>
+                        <option value="wrap-reverse">Wrap Reverse</option>
+                    </select>
+                </div>
+                <div class="align-content-container">
+                    <label for="align-content">Align Content</label>
+                    <select name="align-content" id="align-content">
+                        <option value="">None</option>
+                        <option value="flex-start">Flex Start</option>
+                        <option value="flex-end">Flex End</option>
+                        <option value="center">Center</option>
+                        <option value="space-between">Space Between</option>
+                        <option value="space-around">Space Around</option>
+                        <option value="space-evenly">Space Evenly</option>
+                        <option value="stretch">Stretch</option>
+                    </select>
+                </div>
+                <div class="gap-container">
+                    <label for="gap-property">Gap</label>
+                    <select name="gap-property" id="gap-property">
+                        <option value="">None</option>
+                        <option value="gap">Gap</option>
+                        <option value="row-gap">Row Gap</option>
+                        <option value="column-gap">Column Gap</option>
+                    </select>
+                    <div class="gap-value-container">
+                        <label for="gap-value">Value</label>
+                        <input type="range" min="0" max="100" value="0" name="gap-value" id="gap-value" class="slider"
+                            oninput="document.getElementById('gap-value-output').innerHTML = this.value + ' px'">
+                        <output id="gap-value-output" for="gap-value">0</output>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item-playground">
+                <h6>Flex Item Playground</h6>
+                <div class="item-select-container">
+                    <label for="item-select">Select Item</label>
+                    <select name="item-select" id="item-select">
+                    </select>
+                </div>
+                <div class="item-properties-container">
+                    <div class="order-selection">
+                        <label for="order">Order</label>
+                        <div class="order-value">
+                            <input type="range" name="order" id="order-value" min="-5" max="5" value="0" class="slider"
+                                oninput="document.getElementById('order-output').innerHTML = this.value">
+                            <output id="order-output" for="range">0</output>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <label for="flex-grow">Flex Grow</label>
+                        <div class="grow-value">
+                            <input type="range" name="flex-grow" id="flex-grow" min="0" max="3" value="0" class="slider"
+                                oninput="document.getElementById('flex-grow-output').innerHTML = this.value">
+                            <output id="flex-grow-output" for="flex-grow">0</output>
+                        </div>
+                    </div>
+                    <div class="flex-shrink">
+                        <label for="flex-shrink">Flex Shrink</label>
+                        <div class="shrink-value">
+                            <input type="range" name="flex-shrink" id="flex-shrink" min="0" max="3" class="slider" value="1"
+                                oninput="document.getElementById('flex-shrink-output').innerHTML = this.value">
+                            <output id="flex-shrink-output" for="flex-shrink">1</output>
+                        </div>
+                    </div>
+                    <div class="flex-basis">
+                        <label for="flex-basis">Flex Basis</label>
+                        <div class="basis-value">
+
+                            <input type="range" name="flex-basis" id="flex-basis" min="0" max="100" class="slider"
+                                value="auto"
+                                oninput="document.getElementById('flex-basis-output').innerHTML = this.value + ' %'">
+                            <output id="flex-basis-output" for="flex-basis">auto</output>
+                        </div>
+                    </div>
+                    <div class="flex-align-self">
+                        <label for="flex-align-self">Align Self</label>
+                        <select name="flex-align-self" id="flex-align-self">
+                            <option value="auto">Auto</option>
+                            <option value="flex-start">Flex Start</option>
+                            <option value="flex-end">Flex End</option>
+                            <option value="center">Center</option>
+                            <option value="baseline">Baseline</option>
+                            <option value="stretch">Stretch</option>
+                        </select>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
